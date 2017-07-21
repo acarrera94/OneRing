@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OneRing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dW0-If-e9P" customClass="MKRingProgressView" customModule="OneRing" customModuleProvider="target">
+                                <rect key="frame" x="3" y="259" width="408" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="408" id="5dZ-K7-buR"/>
+                                    <constraint firstAttribute="height" constant="218" id="kuR-eN-KOO"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.0" green="0.72941176470000002" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.0" green="0.98039215690000003" blue="0.81568627449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sM8-mZ-i2n">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yuO-lf-J2N"/>
+                                    <barButtonItem title="Breathe" id="NSe-5s-Lqh">
+                                        <connections>
+                                            <action selector="Breathe:" destination="BYZ-38-t0r" id="DfX-kW-3N3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="jH2-ji-aMh"/>
+                                </items>
+                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sM8-mZ-i2n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8lg-st-Vh9"/>
+                            <constraint firstItem="dW0-If-e9P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y0c-iw-Nao"/>
+                            <constraint firstItem="dW0-If-e9P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fk7-ou-lyI"/>
+                            <constraint firstItem="sM8-mZ-i2n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hAf-Pd-zEE"/>
+                            <constraint firstAttribute="trailing" secondItem="sM8-mZ-i2n" secondAttribute="trailing" id="lss-CJ-Ctb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sM8-mZ-i2n" secondAttribute="bottom" id="vme-ao-Yry"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="RingView" destination="dW0-If-e9P" id="1f9-yf-8mk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="337"/>
+        </scene>
+    </scenes>
+</document>
